@@ -11,7 +11,7 @@
 \RequirePackage{csquotes}
 \RequirePackage[backend=bibtex,bibstyle=numeric,sorting=none,date=long,dateabbrev=false,texencoding=utf8,bibencoding=utf8,style=iso-numeric]{biblatex}
 \RequirePackage{caption}
-
+\RequirePackage{datetime2}
 
 %%%%%% PŘÍKAZY
 \newcommand{\B}{\textbf} % tučné písmo
@@ -81,6 +81,9 @@
 \placefooter{Brno \the\year}
 \mentorstatement{\@mentor}
 
+\newif\ifdraft
+\newif\ifjcmm
+
 %%% Titulní strany
 \renewcommand{\maketitle}{%
 	\pagestyle{empty}
@@ -93,9 +96,16 @@
 
 		\vspace{40mm}
 
-		{\LARGE \B{\@titlecz}} \\
+		{\LARGE \B{\expandafter\MakeUppercase\expandafter{\@titlecz}}} \\
 
-		\vfill
+		\ifdraft
+			\vspace{15mm}
+			\Large \textcolor{red}{\B{PRACOVNÍ VERZE}} \\
+			\small \textcolor{red}{\B{zkompilována \DTMnow}} \\
+			\vfill
+		\else
+			\vfill
+		\fi
 
         	{\Large \B{\@author}} \\
 
@@ -178,6 +188,7 @@
 	{#1}
 
 	\vspace{\baselineskip}
+	\ifjcmm
 	\noindent Tato práce byla provedena za finanční podpory Jihomoravského kraje.
 	\begin{figure}[h]
 	\begin{subfigure}{.5\textwidth}
@@ -187,6 +198,7 @@
   		\includegraphics[width=.8\linewidth]{template/jcmm.png}
 	\end{subfigure}
 	\end{figure}
+	\fi
 
 	\newpage
 	\pagestyle{plain}
