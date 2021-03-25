@@ -105,14 +105,14 @@ Proto jsem pro každé z videí vytvořil i psanou verzi vhodnou pro použití v
     \centering
     \begin{minipage}[b]{0.45\textwidth}
         \centering
-        \includegraphics[width=0.8\textwidth]{img/020/guide1.png}
+        \includegraphics[width=0.75\textwidth]{img/020/guide1.png}
         \caption{Tištěné materiály}
         \label{fig:thumb3}
     \end{minipage}
     \qquad
     \begin{minipage}[b]{0.45\textwidth}
         \centering
-        \includegraphics[width=0.8\textwidth]{img/020/guide2.png}
+        \includegraphics[width=0.75\textwidth]{img/020/guide2.png}
         \caption{Tištěné materiály}
         \label{fig:thumb4}
     \end{minipage}
@@ -120,15 +120,44 @@ Proto jsem pro každé z videí vytvořil i psanou verzi vhodnou pro použití v
 
 
 \subsection{Otázky a úkoly}
-Na konci každého návodu jsou umístěny doplňující otázky a úkoly, které studentům umožňují si procvičit postupy, nebo ověřit získané znalosti.
+Na konci každého návodu na modelování jsou umístěny doplňující otázky a úkoly, které studentům umožňují si procvičit postupy, nebo ověřit získané znalosti.
+U většiny videí z ostatních kategorií není povětšinou zapotřebí znalosti ověřovat, jedná se o postupy které studenti mohou používat, nicméně nejsou pro úspěšnou práci v SolidWorks nutné.
 Řešení těchto otázek a úkolů jsou záměrně umístěny v sekci pro vyučující, která tvoří přílohu těchto tištěných materiálů.
+
+\subsection*{Metodické pokyny}
+Součástí přílohy tisknutelných materiálů pro vyučující jsou i metodické pokyny pro využívání materiálů v prezenční i distanční výuce.
 
 \subsection{Dostupnost tisknutelných materiálů}
 Verze bez metodických pokynů a řešení úloh jsou (\fxnote[inline=true]{\textcolor{red}{BUDOU}}) volně k dispozici na webu \href{https://www.p3dportal.cz}{www.p3dportal.cz} v sekci \enquote{Ke stažení}.
 O variantu pro vyučující je možné si zažádat na e-mailové adrese \href{mailto:info@parallaxproduction.cz}{info@parallaxproduction.cz}.
 
 \section{Výukový portál P3D}
+S narůstajícím počtem videí a dalších materiálů začal vznikat problém v přehlednosti a uváděním souvislostí.
+Po delším přemýšlení jsem dospěl k závěru, že nejjednodušší řešení bude vytvořit pro projekt vlastní webové stránky.
+Díky nim si mohou nejen studenti, ale i vyučující najít všechna videa a doplňkové materiály snadno na jednom místě.
 
+\subsection{Struktura webu}
+Pro přehlednost jsem stránky na webu rozdělil do tří úrovní.
 
-\section{Doplňující }
+\noindent\B{Úvodní stránka} funguje jako rozcestník k jednotlivým podstránkám. Také jsou na ní zobrazená nejnovější videa a další informace k nim.
 
+\noindent\B{Kategorie} jsou na webu aktuálně čtyři - modelování, sestavy, výkresová dokumentace a instalace a nastavení. Na stránce každé kategorie jsou zobrazeny náhledové obrázky všech videí, které do dané kategorie patří.
+Při kliknutí na některý z náhledových obrázků se otevře detail daného videa.
+
+\noindent\B{V detailu videa} je zobrazený jeho popis, potřebné hodnoty a parametry (pokud nějaké jsou) a doplňkové úkoly a otázky vč. jejich řešení. Úkoly s otázkami zobrazenými na detailu videa jsou jiné, než úkoly v tisknutelných materiálech. Nehrozí tak, že by si student odpověď našel na webu. 
+
+\fxnote[inline=true]{\textcolor{mygreen}{Sem přijdou nasypat screeny z webu}}
+
+\subsection{Design webu}
+Stejně jako u videí jsem se zaměřil na to, aby byl design webového portálu moderní a čistý.
+Pozadí a většina prvků webu je laděné do tmavých barev.
+Tento počin má vícero důvodů. 
+Prvním z nich je dnešní oblíbenost tmavých režimů u různých aplikací, druhým poté fakt, že mnoho studentů na projektech pracuje zpravidla večer, kdy je pro oči příjemnější sledovat tmavé barvy. \fxnote[inline=true]{\textcolor{mygreen}{Ještě bych tuto větu přeformuloval?}}
+
+Volba ostatních barev vychází z designu náhledových obrázků videí, opět pro zachování konzistence.
+
+\subsection{Zkracovací subdoména go.p3dportal.cz}
+I přesto, že jsou všechny odkazy na webu lidmi čitelné\footnote{Sestávají se z dobře čitelných částí slov, nikoliv náhodných řetězců znaků}, kvůli struktuře webu mohou být příliš dlouhé.
+Z toho důvodu jsem vytvořil tzv. zkracovací subdoménu \href{https://go.p3dportal.cz}{go.p3dportal.cz}, která umožňuje jakémukoliv odkazu přiřadit jeho zkrácený alias.
+Běh této funkce je zajišťován white-labelovým\footnote{Produkt, který si jeho uživatel může skrýt pod vlastní frontend, v tomto případě doménu} zkracovačem \href{https://short.io}{short.io}.
+Doména go.p3dportal.cz tak slouží čistě jako front end\footnote{Front end = vnější vrstva určité aplikace (to, co vidí uživatel), opakem je back end}.
