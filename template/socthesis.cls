@@ -137,6 +137,7 @@
 		\large \B{ŠKOLA} & \large \B{\@school} & \\
 		\large \B{KRAJ} & \large \B{\@region} & \\
 		\large \B{ŠKOLITEL} & \large \B{\@mentor} & \\
+		\large \B{KONZULTANT} & \large \B{Veronika Babyrádová} & \\
 		\large \B{OBOR} & \large \B{\@field} & \\
 		\end{tabularx}
 		\setlength{\tabcolsep}{6pt}
