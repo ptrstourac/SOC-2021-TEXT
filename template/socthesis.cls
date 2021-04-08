@@ -12,6 +12,7 @@
 \RequirePackage[backend=bibtex,bibstyle=numeric,sorting=none,date=long,dateabbrev=false,texencoding=utf8,bibencoding=utf8,style=iso-numeric]{biblatex}
 \RequirePackage{caption}
 \RequirePackage{datetime2}
+\RequirePackage{setspace}
 
 %%%%%% PŘÍKAZY
 \newcommand{\B}{\textbf} % tučné písmo
@@ -95,8 +96,10 @@
 		\normalsize \B{Obor: \@field} \\
 
 		\vspace{40mm}
-
+		
+		\setstretch{2}
 		{\LARGE \B{\expandafter\MakeUppercase\expandafter{\@titlecz}}} \\
+		\setstretch{1}
 
 		\ifdraft
 			\vspace{15mm}
